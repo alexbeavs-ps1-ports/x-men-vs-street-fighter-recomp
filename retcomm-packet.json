@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "x-men-vs-street-fighter-psx",
+  "name": "X-Men vs. Street Fighter",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "x-men-vs-street-fighter-recomp",
+  "rom_identity": {
+    "crc32": [
+      "02cdbe88"
+    ],
+    "md5": [
+      "79888a0298937d3db4256fd004b50426"
+    ],
+    "sha1": [
+      "c04bf74422c7e1cbb3b961528c38cd67b656856a"
+    ],
+    "disc_serials": [
+      "SLUS-00627"
+    ],
+    "sizes": [
+      392393568
+    ],
+    "filenames": [
+      "X-Men vs. Street Fighter (USA).cue",
+      "X-Men vs. Street Fighter (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "273cad0bd8bccef1c0e0af17218c30f322aa3aee24affc5fcd0e71f2c22a3d97"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/x-men-vs-street-fighter-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "x-men-vs-street-fighter-*-windows-x64.zip",
+      "linux-x64": "x-men-vs-street-fighter-*-linux-x64.zip",
+      "macos-arm64": "x-men-vs-street-fighter-*-macos-arm64.zip",
+      "macos-x64": "x-men-vs-street-fighter-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "x_men_vs_street_fighter.exe",
+    "linux": "x_men_vs_street_fighter",
+    "macos": "x_men_vs_street_fighter"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/x-men-vs-street-fighter-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

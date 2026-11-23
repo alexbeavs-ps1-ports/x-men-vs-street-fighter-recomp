@@ -1,0 +1,61 @@
+[project]
+title = "X-Men vs. Street Fighter"
+region = "USA"
+revision = "serial-bound source; retail revision not separately labeled"
+track = "recompilation"
+intended_audience = "player"
+commercial_use_possible = false
+representative_level = "census scaffold build exit 0 on pin-j-v0.1.8; startup and gameplay not claimed"
+
+[retail_identity]
+disc_count = 1
+serials = ["SLUS-00627"]
+executable_paths = ["disc/SLUS_006.27"]
+executable_sha256 = "02bcd201d4740414598d0c49a4d2aafeb19860f0cec9e438f0388f9a68da94ae"
+exe_name = "x_men_vs_street_fighter"
+load_address = "0x80010000"
+entry_point = "0x800108FC"
+
+[framework]
+name = "PSXRecomp"
+repository = "https://github.com/Alexbeav/psxrecomp.git"
+commit = "6e8cf2ac631740db6bff1ee310f07cfa453fecfb"
+tree = "a9f71c725f3e037fb36a57d8e4a9d7e9de0c2df5"
+recomp_ui_commit = "1f79bfeaa6d4cf6aaa7d55ce9a54dea36fb98f35"
+license = "See the pinned dependency license; this binding does not approve commercial use."
+
+[release_binding]
+source_commit = ""
+current_title_version = "0.1.0"
+current_public_topology = "owned-input-kit-only"
+current_public_release = "none"
+current_package_platform = "none-promoted"
+manual_test = "pending-new-exact-package"
+linux_qualification = "pending-exact-package-and-native-test"
+macos_qualification = "testing-waived-by-alex-2026-09-14; packaging-gates-still-apply"
+publication = "preparatory; public publication is a separate approval"
+retcomm_submission = "not-authorized"
+
+[limits]
+maximum_local_generated_gib = 20
+maximum_single_trace_gib = 8
+
+[paths]
+local_context = ".local-context"
+generated = "generated"
+captures = "out/captures"
+traces = "out/traces"
+packages = "dist"
+
+[release]
+version = "0.1.0"
+platform = "multi-platform"
+supported_platforms = ["windows-x64", "linux-x64", "macos-arm64", "macos-x64"]
+graduation_state = "bootstrap_verified"
+public_package_status = "not-published"
+
+[bios]
+required = true
+profile = "SCPH1001"
+size = 524288
+sha256 = "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"

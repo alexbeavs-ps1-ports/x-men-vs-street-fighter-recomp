@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "X-Men vs. Street Fighter"
+id = "SLUS-00627"
+players = 1
+exe = "disc/SLUS_006.27"
+disc = "disc/X-Men vs. Street Fighter (USA).cue"
+discs = ["disc/X-Men vs. Street Fighter (USA).cue"]
+disc_serials = ["SLUS-00627"]
+load_address = "0x80010000"
+entry_pc = "0x800108FC"
+text_size = "0x000E1000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "X-Men vs. Street Fighter (USA).bin"
+cue_name = "X-Men vs. Street Fighter (USA).cue"
+boot_exe = "SLUS_006.27"
+known_sizes = [392393568]
+known_md5 = [
+  "79888a0298937d3db4256fd004b50426",
+]
+known_sha1 = [
+  "c04bf74422c7e1cbb3b961528c38cd67b656856a",
+]
+known_crc32 = [
+  "02cdbe88",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "X-Men vs. Street Fighter Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "273cad0bd8bccef1c0e0af17218c30f322aa3aee24affc5fcd0e71f2c22a3d97"
