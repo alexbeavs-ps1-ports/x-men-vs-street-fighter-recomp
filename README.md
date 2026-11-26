@@ -71,9 +71,10 @@ BIOS/ROM/save plumbing so you are not stuck repeating each game’s wizard by ha
 
 ## Status
 
-Version 0.1.0. This kit was imported from the wave 13 census scaffold, which built
-on pin-j-v0.1.8 (psxrecomp `6e8cf2ac6`, recomp-ui `1f79bfe`).
-No release package has been built from this kit yet, and no play testing is recorded.
+Version 0.1.1. This kit was imported from the wave 13 census scaffold and is pinned
+to pin-j-v0.1.10 (psxrecomp `b55dd4415`, recomp-ui `cba15e9`).
+Version 0.1.0 was the first release, on pin-j-v0.1.8. Release packages are built in CI from the tagged
+source; no play testing is recorded.
 
 ## Diagnostic mode
 

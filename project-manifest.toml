@@ -5,7 +5,7 @@ revision = "serial-bound source; retail revision not separately labeled"
 track = "recompilation"
 intended_audience = "player"
 commercial_use_possible = false
-representative_level = "census scaffold build exit 0 on pin-j-v0.1.8; startup and gameplay not claimed"
+representative_level = "census scaffold build and 60 s headless boot on pin-j-v0.1.6; pinned to pin-j-v0.1.10; gameplay not claimed"
 
 [retail_identity]
 disc_count = 1
@@ -19,14 +19,14 @@ entry_point = "0x800108FC"
 [framework]
 name = "PSXRecomp"
 repository = "https://github.com/Alexbeav/psxrecomp.git"
-commit = "6e8cf2ac631740db6bff1ee310f07cfa453fecfb"
-tree = "a9f71c725f3e037fb36a57d8e4a9d7e9de0c2df5"
-recomp_ui_commit = "1f79bfeaa6d4cf6aaa7d55ce9a54dea36fb98f35"
+commit = "b55dd44151ba76cc5c2d8ba8ee32cec34e527300"
+tree = "7c61532bd1e7e3568901e9cfc98f64536d3582ee"
+recomp_ui_commit = "cba15e92dbf6e9186cf35eff7cf99054e2bed4cb"
 license = "See the pinned dependency license; this binding does not approve commercial use."
 
 [release_binding]
 source_commit = ""
-current_title_version = "0.1.0"
+current_title_version = "0.1.1"
 current_public_topology = "owned-input-kit-only"
 current_public_release = "none"
 current_package_platform = "none-promoted"
@@ -48,7 +48,7 @@ traces = "out/traces"
 packages = "dist"
 
 [release]
-version = "0.1.0"
+version = "0.1.1"
 platform = "multi-platform"
 supported_platforms = ["windows-x64", "linux-x64", "macos-arm64", "macos-x64"]
 graduation_state = "bootstrap_verified"
